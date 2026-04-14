@@ -137,8 +137,8 @@ function renderQ() {
   const html = `<div class="q-count">Question ${curQ+1} / ${quizData.length}</div><span class="q-emoji">${q.e}</span><p class="q-text">${q.q}</p><div class="q-opts">${optsHTML}</div>`;
   const body = document.getElementById('quizBody');
   body.style.opacity = 0;
-  setTimeout(() => { body.innerHTML = html; body.style.transition = 'opacity .4s'; body.style.opacity = 1; }, 180);
   answered = false;
+  setTimeout(() => { body.innerHTML = html; body.style.transition = 'opacity .4s'; body.style.opacity = 1; }, 180);
 }
 
 function pickOpt(el, idx) {
@@ -175,7 +175,7 @@ function showResult() {
   if (pct >= 0.8) launchConfetti(160);
 }
 
-function restartQ() { curQ = 0; score = 0; renderQ(); }
+function restartQ() { curQ = 0; score = 0; answered = false; renderQ(); }
 renderQ();
 
 /* ═══════════════════════════════════
