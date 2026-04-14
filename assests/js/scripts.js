@@ -59,7 +59,7 @@ function toggleMusic() {
     playing=false; 
     mIcon.className='fa-solid fa-music'; 
     mBtn.classList.remove('playing'); 
-    showToast('⏸️ Musique pausaée');
+    showToast('⏸️ Musique pausée');
   }
 }
 
@@ -330,7 +330,7 @@ setInterval(rotateWord, 3200);
  const rc3DMessages = [
   'Une femme de talent, une force de la nature digitale.',
   'Créativité, stratégie, impact : son trio de charme.',
-  'Une bauté naturelle qui rend son regard et son sourire irrésistibles.',
+  'Une beauté naturelle qui rend son regard et son sourire irrésistibles.',
   'DigiWeb brille grâce à son dévouement quotidien.',
 ];
 
