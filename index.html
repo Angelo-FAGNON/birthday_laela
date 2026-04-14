@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Joyeux Anniversaire Läella | DigiWeb</title>
+
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet"/>
+  <!-- Montserrat -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,700&display=swap" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    <link href="./assests/css/style.css" rel="stylesheet"/>
+  
+</head>
+<body>
+
+<!-- CURSOR -->
+<!-- <div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursorRing"></div> -->
+
+<!-- TOAST -->
+<div id="toast"></div>
+
+<!-- LIGHTBOX -->
+<div id="lightbox">
+  <button id="lb-close" onclick="closeLB()"><i class="fa-solid fa-xmark"></i></button>
+  <img id="lb-img" src="" alt=""/>
+</div>
+
+<!-- MUSIC BUTTON -->
+<button id="musicBtn" onclick="toggleMusic()" title="Musique">
+  <i class="fa-solid fa-music" id="mIcon"></i>
+</button>
+<audio id="bgMusic">
+  <source src="./assests/audio/2.mp3" type="audio/mpeg"/>
+</audio>
+<audio id="bgMusic2">
+  <source src="./assests/audio/1.mp3" type="audio/mpeg"/>
+</audio>
+
+<!-- ══════════════════════════════════════
+     1. HERO
+══════════════════════════════════════ -->
+<section id="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+  <div class="particles" id="particles"></div>
+
+  <div class="hero-content container-fluid px-3 px-sm-4 px-lg-5">
+    <div class="row align-items-center g-4 g-lg-5">
+
+      <!-- LEFT: TEXT -->
+      <div class="col-12 col-lg-6 order-2 order-lg-1 ps-lg-5">
+        <h1 class="hero-title">
+          <span class="word-rotate">Sublime</span><br>
+          Anniversaire<br>
+          <span class="gold">Miss Läella </span>
+        </h1>
+        <p class="hero-sub">
+            Aujourd'hui, on célèbre notre talentueuse Community Manager : Läella AMOUSSA.
+            Community Manager extraordinaire, source d'inspiration et de créativité pour nous tous.
+        </p>
+        <a href="#about" class="btn-hero">
+          Commencer&nbsp;<i class="fa-solid fa-arrow-right fa-sm"></i>
+        </a>
+      </div>
+
+      <!-- RIGHT: PORTRAIT -->
+      <div class="col-12 col-lg-6 order-1 order-lg-2 hero-portrait-col">
+        <div class="hero-portrait-wrap">
+          <div class="h-ring"></div>
+          <img
+            class="hero-portrait-img"
+            src="./assests/img/5.webp"
+            alt="Läella AMOUSSA"
+          />
+          <div class="h-badge">Community Manager</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="scroll-cue">
+    <span>Scroll</span>
+    <div class="s-line"></div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     2. ABOUT — FOND BLANC
+══════════════════════════════════════ -->
+<section id="about" class="section bg-white-section">
+  <div class="container px-3 px-sm-4">
+    <div class="row align-items-center g-4 g-lg-5">
+
+      <!-- Image -->
+      <div class="col-12 col-lg-5 reveal from-left">
+        <div class="about-img-wrap">
+          <div class="about-img-frame">
+            <img
+              src="./assests/img/4.webp"
+              alt="Läella AMOUSSA"
+            />
+          </div>
+          <div class="about-deco-ring"></div>
+          <div class="about-deco-sq"></div>
+          <div class="about-badge-img">CM DigiWeb</div>
+        </div>
+      </div>
+
+      <!-- Text -->
+      <div class="col-12 col-lg-7 reveal from-right">
+        <div class="about-body">
+          <!-- <span class="sec-tag">À propos</span> -->
+          <h2 class="sec-title">La force créative<br>de <span>DigiWeb</span></h2>
+          <div class="gold-bar"></div>
+          <p>
+            Läella n'est pas juste une Community Manager - elle est l'âme de notre présence digitale.
+            Avec une plume précise, un œil stratégique et une énergie contagieuse, elle transforme
+            chaque publication en instant mémorable.
+          </p>
+          <p>
+            Chaque campagne qu'elle orchestre porte sa signature : authenticité, impact, excellence.
+            DigiWeb continue de briller avec sa vision et son dévouement quotidien.
+          </p>
+
+          <div class="mt-3">
+            <div class="feat-card">
+              <div class="feat-icon"><i class="fa-solid fa-paintbrush"></i></div>
+              <div>
+                <div class="feat-title">Créativité</div>
+                <div class="feat-desc">Un contenu toujours frais, engageant et taillé sur mesure pour notre audience.</div>
+              </div>
+            </div>
+
+            <div class="feat-card">
+              <div class="feat-icon"><i class="fa-solid fa-bolt-lightning"></i></div>
+              <div>
+                <div class="feat-title">Impact</div>
+                <div class="feat-desc">Des résultats mesurables et une communauté grandissante grâce à son dévouement.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     3D ROTATION CARD — ANIMATION 3D
+══════════════════════════════════════ -->
+<section id="rotation-3d" class="section bg-white-section">
+  <div class="container px-3 px-sm-4">
+    <div class="text-center mb-5 reveal">
+      <span class="sec-tag">- Admiration</span>
+      <h2 class="sec-title">Un instant d'<span>Elégance</span> sur elle</h2>
+    </div>
+
+    <div class="rotation-container">
+      <div class="rotation-scene">
+        <div class="rotation-card" id="rotationCard">
+          <!-- FACE AVANT -->
+          <div class="rc-face rc-front" id="rcFront">
+            <div class="rc-img-wrap" id="rcFrontImg"></div>
+            <div class="rc-overlay">
+              <p class="rc-message" id="rcFrontMsg"></p>
+            </div>
+          </div>
+          <!-- FACE ARRIÈRE -->
+          <div class="rc-face rc-back" id="rcBack">
+            <div class="rc-img-wrap" id="rcBackImg"></div>
+            <div class="rc-overlay">
+              <p class="rc-message" id="rcBackMsg"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Dots indicateurs -->
+      <div class="rc-dots" id="rcDots"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     GALLERY — FOND SOMBRE
+══════════════════════════════════════ -->
+<section id="gallery">
+  <div class="container px-3 px-sm-4">
+    <div class="gallery-header reveal">
+      <span class="sec-tag">-Galerie</span>
+      <h2 class="sec-title" style="color:var(--white)">L'heureuse du jour <span>mise à l'honneur</span></h2>
+      <p class="gallery-hint">Survolez pour pauser · Cliquez pour agrandir</p>
+    </div>
+  </div>
+
+  <div class="g-row-wrap mb-3">
+    <div class="g-row to-left" id="gRow1"></div>
+  </div>
+  <div class="g-row-wrap">
+    <div class="g-row to-right" id="gRow2"></div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     4. QUIZ — FOND BLANC
+══════════════════════════════════════ -->
+<section id="quiz" class="section bg-white-section">
+  <div class="container px-3 px-sm-4">
+
+    <div class="text-center mb-4 mb-lg-5 reveal">
+      <span class="sec-tag">- Quiz Interactif</span>
+      <h2 class="sec-title">La connaissez vous <span>vraiment ?</span></h2>
+      <p class="mt-2" style="color:#6b7280;font-size:var(--t-sm)">
+        5 questions pour tester ta connaissance de la légende Läella
+      </p>
+    </div>
+
+    <div class="quiz-wrap reveal d1">
+      <div class="q-prog-bar">
+        <div class="q-prog-fill" id="qProg" style="width:0%"></div>
+      </div>
+      <div class="q-card">
+        <div id="quizBody"></div>
+        <button class="btn-next" id="btnNext" onclick="nextQ()">
+          Suivant&nbsp;<i class="fa-solid fa-arrow-right"></i>
+        </button>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     5. MESSAGES — FOND SOMBRE
+══════════════════════════════════════ -->
+<section id="messages" class="section bg-dark-section">
+  <div class="container px-3 px-sm-4">
+    <div class="msg-header reveal">
+      <span class="sec-tag">- Messages</span>
+      <h2 class="sec-title">Ils ont quelque chose<br>à te <span>dire</span></h2>
+    </div>
+  </div>
+  <div class="msg-slider">
+    <div class="msg-track" id="msgTrack"></div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     COUNTDOWN — À L'ANNÉE PROCHAINE
+══════════════════════════════════════ -->
+<section id="countdown" class="section bg-white-section">
+  <div class="container px-3 px-sm-4">
+
+    <div class="text-center mb-4 mb-lg-5 reveal">
+      <span class="sec-tag">- À l'année prochaine</span>
+      <h2 class="sec-title">On se retrouve dans<br><span>combien de temps ?</span></h2>
+      <p class="cd-sub">Le prochain anniversaire de Läella approche… chaque seconde compte !</p>
+    </div>
+
+    <div class="cd-wrap reveal d1">
+
+      <!-- Barre de progression annuelle -->
+      <div class="cd-progress-wrap">
+        <div class="cd-progress-labels">
+          <span>Aujourd'hui</span>
+          <span id="cdProgressPct">0%</span>
+          <span>Prochain anniversaire</span>
+        </div>
+        <div class="cd-progress-bar">
+          <div class="cd-progress-fill" id="cdProgressFill"></div>
+        </div>
+      </div>
+
+      <!-- Blocs de décompte -->
+      <div class="cd-grid">
+        <div class="cd-block">
+          <div class="cd-num" id="cdDays">--</div>
+          <div class="cd-label">Jours</div>
+        </div>
+        <div class="cd-sep">:</div>
+        <div class="cd-block">
+          <div class="cd-num" id="cdHours">--</div>
+          <div class="cd-label">Heures</div>
+        </div>
+        <div class="cd-sep">:</div>
+        <div class="cd-block">
+          <div class="cd-num" id="cdMinutes">--</div>
+          <div class="cd-label">Minutes</div>
+        </div>
+        <div class="cd-sep">:</div>
+        <div class="cd-block cd-block--sec">
+          <div class="cd-num cd-num--sec" id="cdSeconds">--</div>
+          <div class="cd-label">Secondes</div>
+        </div>
+      </div>
+
+      <!-- Message du bas -->
+      <div class="cd-footer">
+        <div class="cd-footer-icon">
+          <i class="fa-solid fa-cake-candles"></i>
+        </div>
+        <p class="cd-footer-text">
+          Le prochain anniversaire de <strong>Läella AMOUSSA</strong> aura lieu le
+          <strong id="cdNextDate">--</strong> — on sera là !
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     COMPLIMENT — FOND SOMBRE
+══════════════════════════════════════ -->
+<section id="compliment">
+  <div class="container px-3 px-sm-4">
+    <div class="cmp-wrap">
+      <div class="text-center reveal">
+        <span class="sec-tag">- Bonus</span>
+        <h2 class="sec-title" style="color:var(--white)">Un compliment<br><span>du jour</span></h2>
+      </div>
+      <div class="cmp-msg reveal d1" id="cmpMsg"></div>
+      <div class="text-center reveal d2">
+        <button class="btn-cmp" onclick="showCmp()">
+          <i class="fa-solid fa-wand-magic-sparkles"></i>
+          Clique pour un compliment
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+ <br>
+  <p class="f-copy">© 2026 DigiWeb · Tous droits réservés · Joyeux Anniversaire 🎂</p>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<script src="./assests/js/scripts.js">
+
+</script>
+</body>
+</html>
