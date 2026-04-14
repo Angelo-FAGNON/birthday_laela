@@ -67,18 +67,18 @@ function toggleMusic() {
    GALLERY
 ═══════════════════════════════════ */
 const galleryImgs = [
-  { u:'../assests/img/1.webp', a:'Team' },
-  { u:'../assests/img/2.webp', a:'Meeting' },
-  { u:'../assests/img/3.webp', a:'Digital' },
-  { u:'../assests/img/4.webp', a:'Team 2' },
-  { u:'../assests/img/5.webp', a:'Work' },
-  { u:'../assests/img/6.webp', a:'Office' },
-  { u:'../assests/img/7.webp', a:'Digital 2' },
-  { u:'../assests/img/8.webp', a:'Team 3' },
-  { u:'../assests/img/9.webp', a:'Digital 3' },
-  { u:'../assests/img/10.webp', a:'Work 2' },
-  { u:'../assests/img/11.webp', a:'Work 3' },
-  { u:'../assests/img/12.webp', a:'Team 4' },
+  { u:'./assests/img/1.webp', a:'Team' },
+  { u:'./assests/img/2.webp', a:'Meeting' },
+  { u:'./assests/img/3.webp', a:'Digital' },
+  { u:'./assests/img/4.webp', a:'Team 2' },
+  { u:'./assests/img/5.webp', a:'Work' },
+  { u:'./assests/img/6.webp', a:'Office' },
+  { u:'./assests/img/7.webp', a:'Digital 2' },
+  { u:'./assests/img/8.webp', a:'Team 3' },
+  { u:'./assests/img/9.webp', a:'Digital 3' },
+  { u:'./assests/img/10.webp', a:'Work 2' },
+  { u:'./assests/img/11.webp', a:'Work 3' },
+  { u:'./assests/img/12.webp', a:'Team 4' },
 ];
 
 function buildGalleryRow(id, imgs) {
