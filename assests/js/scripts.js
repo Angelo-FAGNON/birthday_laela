@@ -114,15 +114,15 @@ document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLB(); }
    QUIZ
 ═══════════════════════════════════ */
 const quizData = [
-  { e:'', q:'Quel est le super-pouvoir de Läella dans l\'équipe DigiWeb ?',
+  { e:'', q:'Quel est le super-pouvoir de Laëla dans l\'équipe DigiWeb ?',
     opts:['Faire du café parfait','Créer du contenu percutant','Disparaître avant l\'heure de sortie','Rendre tout le monde accro aux réseaux'], ans:1 },
-  { e:'', q:'Si Läella était un réseau social, elle serait…',
+  { e:'', q:'Si Laëla était un réseau social, elle serait…',
     opts:['LinkedIn (sérieuse & pro)','Instagram (belle & créative)','TikTok (virale & fun) ','Twitter/X (directe & percutante)'], ans:2 },
-  { e:'', q:'Quelle phrase décrit le mieux Läella ?',
+  { e:'', q:'Quelle phrase décrit le mieux Laëla ?',
     opts:['"Pour votre information, il y a du Yaourt"','"Tiens! Tiens! Autant pour vous, Autant pour moi"','"Olétafishô Ilé"','"Celle qui est au courant de tout les gbêrê dans l\'équipe" '], ans:3 },
-  { e:'', q:'Quelle est la réaction typique de Läella face à un imprévu ou un défi de dernière minute ?',
+  { e:'', q:'Quelle est la réaction typique de Laëla face à un imprévu ou un défi de dernière minute ?',
     opts:['Colère Volcanique','Panique','Changement d\'humeur gigantesque','Sauter de joie'], ans:2 },
-  { e:'', q:'Quelle est la vraie valeur de Läella pour DigiWeb ?',
+  { e:'', q:'Quelle est la vraie valeur de Laëla pour DigiWeb ?',
     opts:['Meilleure Collègue','Mood et Trouble Maker','Elle connaît tous les memes','Elle arrive toujours à l\'heure pile'], ans:1 },
 ];
 let curQ = 0, score = 0, answered = false;
@@ -162,8 +162,8 @@ function showResult() {
   const pct = score / quizData.length;
   let ic, ti, ms;
   if (pct < 0.4)      { ic='😅'; ti='Hmmm… on s\'inquiète !'; ms='Soit tu ne la connais pas vraiment, soit tu as répondu les yeux fermés 😂 Reviens après avoir vu tous ses posts !'; }
-  else if (pct < 0.8) { ic='😊'; ti='Pas mal du tout !'; ms='Tu connais bien Läella ! Continue à l\'observer en action et tu deviendras un expert certifié 🌟'; }
-  else                { ic='🔥'; ti='Tu fais partie de la DigiWeb Family !'; ms='WOW ! Tu connais vraiment notre star ! Tu mérites une médaille DigiWeb. Läella serait fière de toi ! 🏆✨'; }
+  else if (pct < 0.8) { ic='😊'; ti='Pas mal du tout !'; ms='Tu connais bien Laëla ! Continue à l\'observer en action et tu deviendras un expert certifié 🌟'; }
+  else                { ic='🔥'; ti='Tu fais partie de la DigiWeb Family !'; ms='WOW ! Tu connais vraiment notre star ! Tu mérites une médaille DigiWeb. Laëla serait fière de toi ! 🏆✨'; }
   document.getElementById('quizBody').innerHTML = `
     <div class="q-result">
       <span class="q-res-icon">${ic}</span>
@@ -182,25 +182,25 @@ renderQ();
    MESSAGES
 ═══════════════════════════════════ */
 const messages = [
-  {n:'Mr Samuel',        m:'Joyeux anniversaire Miss Laella. Ton talent de communication et ta vision créative font briller notre présence digitale chaque jour.'},
-  {n:'Miss Chrisvalène', m:'Très heureux anniversaire Miss Laella. Merci pour ta passion contagieuse et ton engagement envers notre communauté.'},
-  {n:'Mr Raoul',         m:'Joyeux anniversaire Miss Laella. Que cette nouvelle année t\'apporte encore plus de succès dans tes campagnes créatives.'},
-  {n:'Mr Lauriano',      m:'Bon anniversaire Miss Laella. Ton dévouement et ta détermination inspirent toute l\'équipe à donner le meilleur.'},
-  {n:'Mr Bill',          m:'Joyeux anniversaire Miss Laella. Tu construis des ponts entre nos produits et notre audience avec un talent remarquable.'},
-  {n:'Mr Rodrigue',      m:'Très bon anniversaire Miss Laella. Merci pour ton esprit collaboratif et ta capacité à transformer les idées en histoires captivantes.'},
-  {n:'Miss Rouka',       m:'Joyeux anniversaire Miss Laella. Continue à enchanter nos followers avec ton contenu innovant et authentique.'},
-  {n:'Mr Renaud',        m:'Bon anniversaire Miss Laella. Ta précision stratégique et ta créativité rendent chaque publication mémorable.'},
-  {n:'Mr Hercule',       m:'Joyeux anniversaire Miss Laella. Travailler avec toi est un apprentissage constant en engagement et en connexion humaine.'},
-  {n:'Mr Mouhid',        m:'Très heureux anniversaire Miss Laella. Merci pour ta perspicacité et ta maîtrise des tendances digitales.'},
-  {n:'Mr Anthony',       m:'Bon anniversaire Miss Laella. Que cette nouvelle année soit remplie de campagnes couronnées de succès et de croissance.'},
-  {n:'Miss Paloma',      m:'Joyeux anniversaire Miss Laella. Ton travail et ta passion font de DigiWeb une marque que les gens adorent suivre.'},
-  {n:'Miss Serena',      m:'Très bon anniversaire Miss Laella. Continue à créer du contenu qui inspire, divertit et engage notre communauté.'},
-  {n:'Mr Etienne',       m:'Joyeux anniversaire Miss Laella. Ton autorité dans la gestion communautaire est un véritable atout pour notre stratégie digitale.'},
-  {n:'Mr Angelo',        m:'Joyeux anniversaire Miss Laella. Ta maîtrise du storytelling inspire confiance et fidélité chez nos followers.'},
-  {n:'Mr Magloire',      m:'Très heureux anniversaire Miss Laella. Que ta créativité continue d\'électriser nos réseaux sociaux.'},
-  {n:'Mr Emery',         m:'Bon anniversaire Miss Laella. Merci pour ta constance et ton excellence dans chaque interaction communautaire.'},
-  {n:'Mme TOSSAVI',      m:'Joyeux anniversaire Miss Laella. Nous te souhaitons une année pleine de succès, de connexions et d\'innovations extraordinaires.'},
-  {n:'Mr TOSSAVI',       m:'Très bon anniversaire Miss Laella. Que ton talent continue de bâtir la réputation et le rayonnement de DigiWeb.'},
+  {n:'Mr Samuel',        m:'Joyeux anniversaire Miss Laëla. Ton talent de communication et ta vision créative font briller notre présence digitale chaque jour.'},
+  {n:'Miss Chrisvalène', m:'Très heureux anniversaire Miss Laëla. Merci pour ta passion contagieuse et ton engagement envers notre communauté.'},
+  {n:'Mr Raoul',         m:'Joyeux anniversaire Miss Laëla. Que cette nouvelle année t\'apporte encore plus de succès dans tes campagnes créatives.'},
+  {n:'Mr Lauriano',      m:'Bon anniversaire Miss Laëla. Ton dévouement et ta détermination inspirent toute l\'équipe à donner le meilleur.'},
+  {n:'Mr Bill',          m:'Joyeux anniversaire Miss Laëla. Tu construis des ponts entre nos produits et notre audience avec un talent remarquable.'},
+  {n:'Mr Rodrigue',      m:'Très bon anniversaire Miss Laëla. Merci pour ton esprit collaboratif et ta capacité à transformer les idées en histoires captivantes.'},
+  {n:'Miss Rouka',       m:'Joyeux anniversaire Miss Laëla. Continue à enchanter nos followers avec ton contenu innovant et authentique.'},
+  {n:'Mr Renaud',        m:'Bon anniversaire Miss Laëla. Ta précision stratégique et ta créativité rendent chaque publication mémorable.'},
+  {n:'Mr Hercule',       m:'Joyeux anniversaire Miss Laëla. Travailler avec toi est un apprentissage constant en engagement et en connexion humaine.'},
+  {n:'Mr Mouhid',        m:'Très heureux anniversaire Miss Laëla. Merci pour ta perspicacité et ta maîtrise des tendances digitales.'},
+  {n:'Mr Anthony',       m:'Bon anniversaire Miss Laëla. Que cette nouvelle année soit remplie de campagnes couronnées de succès et de croissance.'},
+  {n:'Miss Paloma',      m:'Joyeux anniversaire Miss Laëla. Ton travail et ta passion font de DigiWeb une marque que les gens adorent suivre.'},
+  {n:'Miss Serena',      m:'Très bon anniversaire Miss Laëla. Continue à créer du contenu qui inspire, divertit et engage notre communauté.'},
+  {n:'Mr Etienne',       m:'Joyeux anniversaire Miss Laëla. Ton autorité dans la gestion communautaire est un véritable atout pour notre stratégie digitale.'},
+  {n:'Mr Angelo',        m:'Joyeux anniversaire Miss Laëla. Ta maîtrise du storytelling inspire confiance et fidélité chez nos followers.'},
+  {n:'Mr Magloire',      m:'Très heureux anniversaire Miss Laëla. Que ta créativité continue d\'électriser nos réseaux sociaux.'},
+  {n:'Mr Emery',         m:'Bon anniversaire Miss Laëla. Merci pour ta constance et ton excellence dans chaque interaction communautaire.'},
+  {n:'Mme TOSSAVI',      m:'Joyeux anniversaire Miss Laëla. Nous te souhaitons une année pleine de succès, de connexions et d\'innovations extraordinaires.'},
+  {n:'Mr TOSSAVI',       m:'Très bon anniversaire Miss Laëla. Que ton talent continue de bâtir la réputation et le rayonnement de DigiWeb.'},
 ];
 const mTrack = document.getElementById('msgTrack');
 [...messages, ...messages].forEach(({ n, m }, idx) => {

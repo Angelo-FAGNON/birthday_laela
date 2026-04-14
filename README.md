@@ -1,4 +1,4 @@
-# Joyeux Anniversaire Läella
+# Joyeux Anniversaire Laëla
 
 ## Description
 
@@ -15,7 +15,7 @@ Application web interactive dédiée à la célébration d'un anniversaire. Le p
 ## Structure du projet
 
 ```
-Birthday_laella/
+Birthday_Laëla/
 ├── index.html              # Page principale
 ├── assests/
 │   ├── audio/             # Fichiers audio (mp3)
