@@ -182,6 +182,7 @@ renderQ();
    MESSAGES
 ═══════════════════════════════════ */
 const messages = [
+  {n:'Mr Bernard',       m:'Chère Laëla, je te souhaite un très heureux anniversaire. Que chaque jour de l\'année à venir t\'apporte joie, santé et accomplissement.'},
   {n:'Mr Samuel',        m:'Joyeux anniversaire Miss Laëla. Ton talent de communication et ta vision créative font briller notre présence digitale chaque jour.'},
   {n:'Miss Chrisvalène', m:'Très heureux anniversaire Miss Laëla. Merci pour ta passion contagieuse et ton engagement envers notre communauté.'},
   {n:'Mr Raoul',         m:'Joyeux anniversaire Miss Laëla. Que cette nouvelle année t\'apporte encore plus de succès dans tes campagnes créatives.'},
