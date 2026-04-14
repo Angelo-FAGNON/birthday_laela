@@ -195,7 +195,7 @@ const messages = [
   {n:'Mr Mouhid',        m:'Très heureux anniversaire Miss Laëla. Merci pour ta perspicacité et ta maîtrise des tendances digitales.'},
   {n:'Mr Anthony',       m:'Bon anniversaire Miss Laëla. Que cette nouvelle année soit remplie de campagnes couronnées de succès et de croissance.'},
   {n:'Miss Paloma',      m:'Joyeux anniversaire Miss Laëla. Ton travail et ta passion font de DigiWeb une marque que les gens adorent suivre.'},
-  {n:'Miss Serena',      m:'Très bon anniversaire Miss Laëla. Continue à créer du contenu qui inspire, divertit et engage notre communauté.'},
+  {n:'Miss Serena',      m:'Très bon anniversaire Miss Laëla. Continuez à créer du contenu qui inspire, divertit et engage notre communauté.'},
   {n:'Mr Etienne',       m:'Joyeux anniversaire Miss Laëla. Ton autorité dans la gestion communautaire est un véritable atout pour notre stratégie digitale.'},
   {n:'Mr Angelo',        m:'Joyeux anniversaire Miss Laëla. Ta maîtrise du storytelling inspire confiance et fidélité chez nos followers.'},
   {n:'Mr Magloire',      m:'Très heureux anniversaire Miss Laëla. Que ta créativité continue d\'électriser nos réseaux sociaux.'},
