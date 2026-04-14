@@ -183,10 +183,10 @@ renderQ();
 ═══════════════════════════════════ */
 const messages = [
   {n:'Mr Bernard',       m:'Chère Laëla, je te souhaite un très heureux anniversaire. Que chaque jour de l\'année à venir t\'apporte joie, santé et accomplissement.'},
-  {n:'Mr Samuel',        m:'Joyeux anniversaire Miss Laëla. Ton talent de communication et ta vision créative font briller notre présence digitale chaque jour.'},
-  {n:'Miss Chrisvalène', m:'Très heureux anniversaire Miss Laëla. Merci pour ta passion contagieuse et ton engagement envers notre communauté.'},
-  {n:'Mr Raoul',         m:'Joyeux anniversaire Miss Laëla. Que cette nouvelle année t\'apporte encore plus de succès dans tes campagnes créatives.'},
-  {n:'Mr Lauriano',      m:'Bon anniversaire Miss Laëla. Ton dévouement et ta détermination inspirent toute l\'équipe à donner le meilleur.'},
+  {n:'Mr Samuel',        m:'Joyeux anniversaire Miss Laëla. Votre talent de communication et votre vision créative font briller notre présence digitale chaque jour.'},
+  {n:'Miss Chrisvalène', m:'Très heureux anniversaire Miss Laëla. Merci pour votre passion contagieuse et votre engagement envers notre communauté.'},
+  {n:'Mr Raoul',         m:'Joyeux anniversaire Miss Laëla. Que cette nouvelle année vous apporte encore plus de succès.'},
+  {n:'Mr Lauriano',      m:'Bon anniversaire Miss Laëla. Votre dévouement et votre détermination motivent toute l\'équipe à donner le meilleur.'},
   {n:'Mr Bill',          m:'Joyeux anniversaire Miss Laëla. Tu construis des ponts entre nos produits et notre audience avec un talent remarquable.'},
   {n:'Mr Rodrigue',      m:'Très bon anniversaire Miss Laëla. Merci pour ton esprit collaboratif et ta capacité à transformer les idées en histoires captivantes.'},
   {n:'Miss Rouka',       m:'Joyeux anniversaire Miss Laëla. Continue à enchanter nos followers avec ton contenu innovant et authentique.'},
