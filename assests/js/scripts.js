@@ -62,20 +62,19 @@ function toggleMusic() {
     showToast('⏸️ Musique pausée');
   }
 }
-
 /* ═══════════════════════════════════
    GALLERY
 ═══════════════════════════════════ */
 const galleryImgs = [
-  { u:'./assests/img/1.webp', a:'Image 1' },
-  { u:'./assests/img/2.webp', a:'Image 2' },
-  { u:'./assests/img/3.webp', a:'Image 3' },
-  { u:'./assests/img/4.webp', a:'Image 4' },
-  { u:'./assests/img/5.webp', a:'Image 5' },
-  { u:'./assests/img/6.webp', a:'Image 6' },
-  { u:'./assests/img/7.webp', a:'Image 7' },
-  { u:'./assests/img/8.webp', a:'Image 8' },
-  { u:'./assests/img/9.webp', a:'Image 9' },
+  { u:'./assests/img/1.webp',  a:'Image 1'  },
+  { u:'./assests/img/2.webp',  a:'Image 2'  },
+  { u:'./assests/img/3.webp',  a:'Image 3'  },
+  { u:'./assests/img/4.webp',  a:'Image 4'  },
+  { u:'./assests/img/5.webp',  a:'Image 5'  },
+  { u:'./assests/img/6.webp',  a:'Image 6'  },
+  { u:'./assests/img/7.webp',  a:'Image 7'  },
+  { u:'./assests/img/8.webp',  a:'Image 8'  },
+  { u:'./assests/img/9.webp',  a:'Image 9'  },
   { u:'./assests/img/10.webp', a:'Image 10' },
   { u:'./assests/img/11.webp', a:'Image 11' },
   { u:'./assests/img/12.webp', a:'Image 12' },
@@ -84,17 +83,32 @@ const galleryImgs = [
 function buildGalleryRow(id, imgs) {
   const row = document.getElementById(id);
   [...imgs, ...imgs].forEach(({ u, a }) => {
-    const wrap = document.createElement('div'); wrap.className = 'g-item';
-    wrap.innerHTML = `<img src="${u}" alt="${a}" loading="lazy"/><div class="g-zoom-icon"><i class="fa-solid fa-magnifying-glass-plus"></i></div>`;
-    wrap.addEventListener('mouseenter', () => row.classList.add('paused'));
-    wrap.addEventListener('mouseleave', () => row.classList.remove('paused'));
+    const wrap = document.createElement('div');
+    wrap.className = 'g-item';
+    wrap.innerHTML = `
+      <img src="${u}" alt="${a}" loading="lazy"/>
+      <div class="g-zoom-icon"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+    `;
+    wrap.addEventListener('mouseenter', () => row.classList.add('hover-paused'));
+    wrap.addEventListener('mouseleave', () => row.classList.remove('hover-paused'));
     wrap.addEventListener('click', () => openLB(u, a));
     row.appendChild(wrap);
   });
 }
+
 buildGalleryRow('gRow1', galleryImgs);
 buildGalleryRow('gRow2', [...galleryImgs].reverse());
 
+/* Pause automatique quand la galerie est hors écran */
+const galleryObserver = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    e.target.style.animationPlayState = e.isIntersecting ? 'running' : 'paused';
+  });
+}, { rootMargin: '100px' });
+
+document.querySelectorAll('.g-row').forEach(row => galleryObserver.observe(row));
+
+/* Lightbox */
 function openLB(src, alt) {
   document.getElementById('lb-img').src = src;
   document.getElementById('lb-img').alt = alt;
@@ -110,6 +124,7 @@ document.getElementById('lightbox').addEventListener('click', e => {
 });
 document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLB(); });
 
+
 /* ═══════════════════════════════════
    QUIZ
 ═══════════════════════════════════ */
@@ -123,7 +138,7 @@ const quizData = [
   { e:'', q:'Quelle est la réaction typique de Laëla face à un imprévu ou un défi de dernière minute ?',
     opts:['Colère Volcanique','Panique','Changement d\'humeur gigantesque','Sauter de joie'], ans:2 },
   { e:'', q:'Quelle est la vraie valeur de Laëla pour DigiWeb ?',
-    opts:['Meilleure Collègue','Mood et Trouble Maker','Elle connaît tous les memes','Elle arrive toujours à l\'heure pile'], ans:1 },
+    opts:['Mood Maker','Meilleure Collègue','Elle connaît tous les memes','Elle arrive toujours à l\'heure pile'], ans:1 },
 ];
 let curQ = 0, score = 0, answered = false;
 
