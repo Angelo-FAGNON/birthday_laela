@@ -62,6 +62,28 @@ function toggleMusic() {
     showToast('⏸️ Musique pausée');
   }
 }
+
+// Déclencher la musique au premier touche/clic
+function autoPlayMusic() {
+  if (!playing) {
+    audio.play()
+      .then(() => { 
+        playing = true; 
+        mIcon.className = 'fa-solid fa-pause'; 
+        mBtn.classList.add('playing'); 
+        showToast('🎵 Musique activée !'); 
+      })
+      .catch(() => showToast('⚠️ Autorisez l\'audio dans le navigateur'));
+  }
+  // Retirer les écouteurs après le premier déclenchement
+  document.removeEventListener('click', autoPlayMusic);
+  document.removeEventListener('touchstart', autoPlayMusic);
+  document.removeEventListener('keydown', autoPlayMusic);
+}
+
+document.addEventListener('click', autoPlayMusic, { once: true });
+document.addEventListener('touchstart', autoPlayMusic, { once: true });
+document.addEventListener('keydown', autoPlayMusic, { once: true });
 /* ═══════════════════════════════════
    GALLERY
 ═══════════════════════════════════ */
